@@ -74,7 +74,7 @@ exp.post('/car/',(req,res)=>{
     }    
 })
 
-function makeCar(name,color = "red" ,price=0 ){
+function makeCar(name,color,price ){
     let car = {
         id : cars.length + 1,
         name : name,
