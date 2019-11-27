@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 #{info.title}
+  p Welcome to #{title}
+
+  form(method='POST' action='/show')
+          div.form-group
+            label(for='bookName') Book Name:
+            input#name.form-control(type='text', placeholder='first and last' name='bookName')
+          div.form-group
+            label(for='authorName') Author Name:
+            input#name.form-control(type='text', placeholder='author name' name='authorName')
+          button.btn.btn-primary(type='submit') Sign up
