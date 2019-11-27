@@ -1,15 +1,16 @@
 const mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost:27017/courses", {
+mongoose.connect("mongodb://localhost:27017/CarsPoint", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useFindAndModify: false
+  useFindAndModify: false,
+  useCreateIndex: true
 });
 
 var db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
 db.once("open", function() {
-  console.log("active");
+  console.log("Connected to Mongo Database");
 });
 
 module.exports = db;
